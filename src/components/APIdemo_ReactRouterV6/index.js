@@ -1,31 +1,34 @@
-import { Routes, Route, Link } from 'react-router-dom'
-import Home from './Home'
-import Product from './Product'
-import Weather from './Weather'
+import { useEffect } from "react";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 function Main() {
-    return (
-        <>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to='/'>Home</Link>
-                    </li>
-                    <li>
-                        <Link to='/weather'>Weather</Link>
-                    </li>
-                    <li>
-                        <Link to='/product'>Product</Link>
-                    </li>
-                </ul>
-            </nav>
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='weather' element={<Weather />} />
-                <Route path='product' element={<Product />} />
-            </Routes>
-        </>
-    )
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/home");
+  }, []);
+
+  return (
+    <>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
+          <li>
+            <Link to="/weather">Weather</Link>
+          </li>
+          <li>
+            <Link to="/product">Product</Link>
+          </li>
+          <li>
+            <Link to="/sign-up">Sign Up</Link> or <Link to="/login">Login</Link>
+          </li>
+        </ul>
+      </nav>
+      <Outlet />
+    </>
+  );
 }
 
-export default Main
+export default Main;
