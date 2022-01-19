@@ -1,0 +1,28 @@
+.btn {
+  min-width: 100px;
+  min-height: 40px;
+
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+
+  padding: 6px 12px;
+}
+
+.btnPrimary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #ffffff;
+}
+
+.btnSecondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #ffffff;
+}
+
+.btnSuccess {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #ffffff;
+}

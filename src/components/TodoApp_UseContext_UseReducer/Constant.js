@@ -1,0 +1,3 @@
+export const SET_TODO_INPUT = 'SET_TODO_INPUT'
+export const ADD_EACH_TODO = 'ADD_EACH_TODO'
+export const DELETE_EACH_TODO = 'DELETE_EACH_TODO'
